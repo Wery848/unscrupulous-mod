@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "unscrupulous:block/soul_stone_ore"
+  }
+}
