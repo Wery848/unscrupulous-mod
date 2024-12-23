@@ -14,5 +14,6 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
     protected void registerModels() {
         // For all Items
         basicItem(ModItems.SOUL_STONE.get());
+        basicItem(ModItems.SOUL_APPLE.get());
     }
 }
