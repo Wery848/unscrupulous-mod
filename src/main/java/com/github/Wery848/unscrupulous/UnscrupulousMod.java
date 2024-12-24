@@ -38,13 +38,16 @@ public class UnscrupulousMod
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        // Register the Creative Tab
+        UnscrupulousCreativeTab.register(modEventBus);
+
         // Register Mod Items
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+
+
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -52,14 +55,6 @@ public class UnscrupulousMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
-    }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
-            event.accept(ModItems.SOUL_STONE);
 
     }
 

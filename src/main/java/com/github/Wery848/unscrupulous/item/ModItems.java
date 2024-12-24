@@ -22,8 +22,7 @@ public class ModItems {
                     .nutrition(6)
                     .saturationModifier(0.8f)
                     .alwaysEdible().build()
-    )
-    );
+    ));
 
     // Register method for items
     public static void register(IEventBus eventBus) {
