@@ -24,7 +24,6 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE)
                     );
 
-    // Registry Blocks
     public static final DeferredBlock<Block> DEEPSLATE_SOUL_STONE_ORE = registerBlockAndItem("deepslate_soul_stone_ore",
             BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
