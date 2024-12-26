@@ -16,6 +16,7 @@ public class BlockstateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // Do for all Blocks in BLOCKS Deferred register
         blockWithItem(ModBlocks.SOUL_STONE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SOUL_STONE_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

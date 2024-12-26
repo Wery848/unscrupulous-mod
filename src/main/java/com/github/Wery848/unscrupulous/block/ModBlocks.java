@@ -19,10 +19,19 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SOUL_STONE_ORE = registerBlockAndItem("soul_stone_ore",
             BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
-                    .strength(1.5f, 6.0f)
+                    .strength(3.0f, 3.0f)
                     .sound(SoundType.STONE)
                     .mapColor(MapColor.STONE)
                     );
+
+    // Registry Blocks
+    public static final DeferredBlock<Block> DEEPSLATE_SOUL_STONE_ORE = registerBlockAndItem("deepslate_soul_stone_ore",
+            BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5f, 3.0f)
+                    .sound(SoundType.STONE)
+                    .mapColor(MapColor.STONE)
+    );
 
     // Utility Methods
     // New and improved helper method

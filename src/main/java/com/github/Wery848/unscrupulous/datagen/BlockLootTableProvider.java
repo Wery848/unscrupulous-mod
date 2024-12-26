@@ -26,6 +26,8 @@ public class BlockLootTableProvider extends BlockLootSubProvider {
 
         add(ModBlocks.SOUL_STONE_ORE.get(),
                 block -> createOreDrop(ModBlocks.SOUL_STONE_ORE.get(), ModItems.SOUL_STONE.get()));
+        add(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get(), ModItems.SOUL_STONE.get()));
     }
 
     @Override

@@ -23,6 +23,7 @@ public class UnscrupulousCreativeTab {
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModItems.SOUL_APPLE);
                                 output.accept(ModBlocks.SOUL_STONE_ORE);
+                                output.accept(ModBlocks.DEEPSLATE_SOUL_STONE_ORE);
                                 output.accept(ModItems.SOUL_STONE);
                             })
 

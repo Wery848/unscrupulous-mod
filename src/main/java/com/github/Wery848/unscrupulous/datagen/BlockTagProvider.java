@@ -19,9 +19,11 @@ public class BlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SOUL_STONE_ORE.get());
+                .add(ModBlocks.SOUL_STONE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.SOUL_STONE_ORE.get());
+                .add(ModBlocks.SOUL_STONE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get());
     }
 }
