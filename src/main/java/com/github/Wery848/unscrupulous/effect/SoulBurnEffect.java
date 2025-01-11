@@ -1,5 +1,6 @@
 package com.github.Wery848.unscrupulous.effect;
 
+import com.github.Wery848.unscrupulous.block.ModBlocks;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -20,7 +21,7 @@ public class SoulBurnEffect extends MobEffect {
         livingEntity.setRemainingFireTicks(20);
         if(!livingEntity.isInLiquid() && !livingEntity.isInPowderSnow) {
             if(!level.isClientSide()) {
-                level.setBlockAndUpdate(livingEntity.blockPosition(), Blocks.FIRE.defaultBlockState());
+                level.setBlockAndUpdate(livingEntity.blockPosition(), ModBlocks.SOUL_BURN_FIRE.get().defaultBlockState());
                 System.out.println("Position fire placed: X = " + livingEntity.blockPosition().getX() + "; Y = " + livingEntity.blockPosition().getY() + "; Z = " + livingEntity.blockPosition().getZ());
             }
         }

@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -31,6 +32,11 @@ public class ModBlocks {
                     .sound(SoundType.STONE)
                     .mapColor(MapColor.STONE)
     );
+
+    public static final DeferredBlock<Block> SOUL_BURN_FIRE = BLOCKS.registerBlock("soul_burn_fire", SoulBurnFire::new,
+            BlockBehaviour.Properties.of().noOcclusion()
+                    .mapColor(MapColor.COLOR_LIGHT_BLUE).replaceable().noCollission().instabreak().lightLevel((p_50755_) -> 10).sound(SoundType.WOOL).pushReaction(PushReaction.DESTROY));
+
 
     // Utility Methods
     // New and improved helper method

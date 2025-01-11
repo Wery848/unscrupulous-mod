@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_floor",
+  "textures": {
+    "fire": "unscrupulous:block/soul_burn_fire_0"
+  }
+}

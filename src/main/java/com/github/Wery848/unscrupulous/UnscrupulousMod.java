@@ -3,7 +3,10 @@ package com.github.Wery848.unscrupulous;
 import com.github.Wery848.unscrupulous.block.ModBlocks;
 import com.github.Wery848.unscrupulous.effect.ModEffects;
 import com.github.Wery848.unscrupulous.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -56,7 +59,7 @@ public class UnscrupulousMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SOUL_BURN_FIRE.get(), RenderType.cutoutMipped());
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

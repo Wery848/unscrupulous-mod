@@ -2,6 +2,7 @@ package com.github.Wery848.unscrupulous.datagen;
 
 import com.github.Wery848.unscrupulous.UnscrupulousMod;
 import com.github.Wery848.unscrupulous.block.ModBlocks;
+import com.github.Wery848.unscrupulous.block.SoulBurnFire;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -25,5 +26,8 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SOUL_STONE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get());
+
+        tag(BlockTags.FIRE)
+                .add(ModBlocks.SOUL_BURN_FIRE.get());
     }
 }
