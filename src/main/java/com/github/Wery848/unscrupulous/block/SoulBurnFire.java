@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
@@ -50,8 +51,20 @@ public class SoulBurnFire extends BaseFireBlock {
         super.entityInside(state, level, pos, entity);
     }
 
-//    @Override
-//    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-//        return true;
-//    }
+    @Override
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos blockpos = pos.below();
+        return level.getBlockState(blockpos).isFaceSturdy(level, blockpos, Direction.UP) || this.isValidFireLocation(level, pos);
+    }
+
+    private boolean isValidFireLocation(BlockGetter level, BlockPos pos) {
+        for(Direction direction : Direction.values()) {
+            if (level.getBlockState(pos).isFlammable(level, pos.relative(direction), direction.getOpposite())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
