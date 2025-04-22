@@ -3,6 +3,7 @@ package com.github.Wery848.unscrupulous;
 import com.github.Wery848.unscrupulous.block.ModBlocks;
 import com.github.Wery848.unscrupulous.effect.ModEffects;
 import com.github.Wery848.unscrupulous.item.ModItems;
+import com.github.Wery848.unscrupulous.item.ModPotions;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -51,7 +52,8 @@ public class UnscrupulousMod
         ModBlocks.register(modEventBus);
         // Register Mod Effects
         ModEffects.register(modEventBus);
-
+        // Register Mod Potions
+        ModPotions.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

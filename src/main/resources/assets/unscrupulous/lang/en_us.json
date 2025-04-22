@@ -8,6 +8,9 @@
 
   "effect.unscrupulous.soulburn": "Soul Burn",
 
-  "creativetab.unscrupulous.unscrupulous_things": "Unscrupulous Mod"
+  "creativetab.unscrupulous.unscrupulous_things": "Unscrupulous Mod",
 
+  "item.minecraft.potion.effect.soul_burn_fire_potion": "Soulfire Potion",
+  "item.minecraft.splash_potion.effect.soul_burn_fire_potion": "Splash Soulfire Potion",
+  "item.minecraft.lingering_potion.effect.soul_burn_fire_potion": "Splash Soulfire Potion"
 }

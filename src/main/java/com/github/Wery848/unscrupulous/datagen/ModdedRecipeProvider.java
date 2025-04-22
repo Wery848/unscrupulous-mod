@@ -20,6 +20,8 @@ public class ModdedRecipeProvider extends RecipeProvider {
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.SOUL_STONE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_soul_stone", this.has(ModItems.SOUL_STONE)).save(this.output, "soul_stone_refining");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SOUL_STONE_ORE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_soul_stone_ore", this.has(ModBlocks.SOUL_STONE_ORE)).save(this.output, "soul_stone_ore_refining");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DEEPSLATE_SOUL_STONE_ORE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_deepslate_soul_stone_ore", this.has(ModBlocks.DEEPSLATE_SOUL_STONE_ORE)).save(this.output, "deepslate_soul_stone_ore_refining");
+
+
     }
 
     // The runner to add to the data generator
@@ -33,7 +35,6 @@ public class ModdedRecipeProvider extends RecipeProvider {
         protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
             return new ModdedRecipeProvider(provider, recipeOutput);
         }
-
 
         @Override
         public String getName() {
