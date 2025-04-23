@@ -16,5 +16,6 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(ModItems.SOUL_STONE.get());
         basicItem(ModItems.SOUL_APPLE.get());
         basicItem(ModItems.REFINED_SOUL_STONE.get());
+        basicItem(ModItems.SOUL_IN_A_BOTTLE.get());
     }
 }

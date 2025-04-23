@@ -17,6 +17,7 @@ public class ModItems {
     // New & Improved - 12/3/24
     public static final DeferredItem<Item> SOUL_STONE = createItemWithProps("soul_stone", new Item.Properties());
     public static final DeferredItem<Item> REFINED_SOUL_STONE = createItemWithProps("refined_soul_stone", new Item.Properties());
+    public static final DeferredItem<Item> SOUL_IN_A_BOTTLE = createItemWithProps("soul_in_a_bottle", new Item.Properties());
 
     public static final DeferredItem<Item> SOUL_APPLE = createItemWithProps("soul_apple", new Item.Properties().food(
             new FoodProperties.Builder()

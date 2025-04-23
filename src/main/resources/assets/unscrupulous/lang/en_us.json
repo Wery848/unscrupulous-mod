@@ -2,6 +2,7 @@
   "item.unscrupulous.soul_stone": "Soul Stone",
   "item.unscrupulous.soul_apple": "Soul Apple",
   "item.unscrupulous.refined_soul_stone": "Refined Soul Stone",
+  "item.unscrupulous.soul_in_a_bottle": "Soul-In-A-Bottle",
 
   "block.unscrupulous.soul_stone_ore": "Soul Stone Ore",
   "block.unscrupulous.deepslate_soul_stone_ore": "Deepslate Soul Stone Ore",
@@ -12,5 +13,9 @@
 
   "item.minecraft.potion.effect.soul_burn_fire_potion": "Soulfire Potion",
   "item.minecraft.splash_potion.effect.soul_burn_fire_potion": "Splash Soulfire Potion",
-  "item.minecraft.lingering_potion.effect.soul_burn_fire_potion": "Splash Soulfire Potion"
+  "item.minecraft.lingering_potion.effect.soul_burn_fire_potion": "Lingering Soulfire Potion",
+
+  "item.minecraft.potion.effect.soul_stone_solution": "Soul Stone Solution",
+  "item.minecraft.splash_potion.effect.soul_stone_solution": "Splash Soul Stone Solution",
+  "item.minecraft.lingering_potion.effect.soul_stone_solution": "Lingering Soul Stone Solution"
 }

@@ -12,10 +12,15 @@ import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 
 @EventBusSubscriber(modid = UnscrupulousMod.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
+
+    // Brewing Recipe for Soulfire Potion
     @SubscribeEvent
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
 
-        builder.addMix(Potions.AWKWARD, ModItems.SOUL_STONE.get(), ModPotions.SOUL_FIRE_POTION);
+        builder.addMix(ModPotions.SOUL_STONE_SOLUTION, ModItems.SOUL_IN_A_BOTTLE.get(), ModPotions.SOUL_FIRE_POTION);
+        builder.addMix(Potions.WATER, ModItems.REFINED_SOUL_STONE.get(), ModPotions.SOUL_STONE_SOLUTION);
     }
+
+
 }

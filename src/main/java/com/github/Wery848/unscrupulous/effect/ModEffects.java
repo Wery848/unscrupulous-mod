@@ -16,7 +16,7 @@ public class ModEffects {
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, UnscrupulousMod.MODID);
 
     public static Holder<MobEffect> SOUL_BURN_EFFECT = MOB_EFFECTS.register("soulburn",
-            () -> new SoulBurnEffect(MobEffectCategory.HARMFUL, 0x07F6FF).addAttributeModifier(Attributes.BURNING_TIME,
+            () -> new SoulBurnEffect(MobEffectCategory.HARMFUL, 0x000000).addAttributeModifier(Attributes.BURNING_TIME,
                     ResourceLocation.fromNamespaceAndPath(UnscrupulousMod.MODID, "soulburn"), 5.0f,
                     AttributeModifier.Operation.ADD_VALUE));
 

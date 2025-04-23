@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -26,6 +27,9 @@ public class UnscrupulousCreativeTab {
                                 output.accept(ModBlocks.SOUL_STONE_ORE);
                                 output.accept(ModBlocks.DEEPSLATE_SOUL_STONE_ORE);
                                 output.accept(ModItems.SOUL_STONE);
+                                output.accept(ModItems.REFINED_SOUL_STONE);
+                                output.accept(ModItems.SOUL_IN_A_BOTTLE);
+                                //output.accept(PotionUtils.setPotion(new ItemStack(Items.POTION), ModPotions.SOUL_FIRE_POTION));
                             })
 
 
