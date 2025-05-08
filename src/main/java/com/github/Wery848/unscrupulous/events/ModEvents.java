@@ -3,7 +3,6 @@ package com.github.Wery848.unscrupulous.events;
 import com.github.Wery848.unscrupulous.UnscrupulousMod;
 import com.github.Wery848.unscrupulous.item.ModItems;
 import com.github.Wery848.unscrupulous.item.ModPotions;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
 import net.neoforged.bus.api.SubscribeEvent;

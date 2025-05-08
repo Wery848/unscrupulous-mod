@@ -1,12 +1,10 @@
 package com.github.Wery848.unscrupulous.block;
 
 import com.github.Wery848.unscrupulous.effect.ModEffects;
-import com.github.Wery848.unscrupulous.effect.SoulBurnEffect;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,16 +13,26 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.BaseFireBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FireBlock;
-import net.minecraft.world.level.block.SoulFireBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+
+import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 
 public class SoulBurnFire extends BaseFireBlock {
     public static final MapCodec<SoulBurnFire> CODEC = simpleCodec(SoulBurnFire::new);
 
     public SoulBurnFire(Properties properties) {
         super(properties, 2.0f);
+        this.registerDefaultState(
+                this.defaultBlockState()
+                        .setValue(NORTH, false)
+                        .setValue(EAST, false)
+                        .setValue(SOUTH, false)
+                        .setValue(WEST, false)
+                        .setValue(UP, false)
+        );
     }
 
     @Override
@@ -67,4 +75,8 @@ public class SoulBurnFire extends BaseFireBlock {
         return false;
     }
 
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(NORTH, EAST, SOUTH, WEST, UP);
+    }
 }

@@ -2,19 +2,12 @@ package com.github.Wery848.unscrupulous.datagen;
 
 import com.github.Wery848.unscrupulous.UnscrupulousMod;
 import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.block.SoulBurnFire;
-import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-public class BlockstateProvider extends BlockStateProvider {
-    public BlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+public class BlockstateProvider  {
+    /*public BlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, UnscrupulousMod.MODID, exFileHelper);
     }
 
@@ -25,7 +18,7 @@ public class BlockstateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_SOUL_STONE_ORE);
 
         // Soul Fire Multipart Block
-        ModelFile soulBurnFloor0 = models().getExistingFile(ResourceLocation.fromNamespaceAndPath("unscrupulous", "block/soul_burn_fire_floor0.json"));     //.withExistingParent("soul_burn_fire_floor0", this.mcLoc("block/template_fire_floor"));
+        ModelFile soulBurnFloor0 = models().getExistingFile(ResourceLocation.fromNamespaceAndPath("unscrupulous", "block/soul_burn_fire_floor0.json"));
         ModelFile soulBurnFloor1 = models().getExistingFile(ResourceLocation.fromNamespaceAndPath("unscrupulous", "block/soul_burn_fire_floor1.json"));
         ModelFile soulBurnSide0 = models().getExistingFile(ResourceLocation.fromNamespaceAndPath("unscrupulous", "block/soul_burn_fire_side0.json"));
         ModelFile soulBurnSide1 = models().getExistingFile(ResourceLocation.fromNamespaceAndPath("unscrupulous", "block/soul_burn_fire_side1.json"));
@@ -106,5 +99,5 @@ public class BlockstateProvider extends BlockStateProvider {
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
-    }
+    }*/
 }
