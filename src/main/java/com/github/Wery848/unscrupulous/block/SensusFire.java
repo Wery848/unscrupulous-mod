@@ -20,10 +20,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 
-public class SoulBurnFire extends BaseFireBlock {
-    public static final MapCodec<SoulBurnFire> CODEC = simpleCodec(SoulBurnFire::new);
+public class SensusFire extends BaseFireBlock {
+    public static final MapCodec<SensusFire> CODEC = simpleCodec(SensusFire::new);
 
-    public SoulBurnFire(Properties properties) {
+    public SensusFire(Properties properties) {
         super(properties, 2.0f);
         this.registerDefaultState(
                 this.defaultBlockState()
@@ -36,7 +36,7 @@ public class SoulBurnFire extends BaseFireBlock {
     }
 
     @Override
-    protected MapCodec<SoulBurnFire> codec() {
+    protected MapCodec<SensusFire> codec() {
         return CODEC;
     }
 
@@ -54,7 +54,7 @@ public class SoulBurnFire extends BaseFireBlock {
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if(entity instanceof LivingEntity) {
             LivingEntity livingEntity = (LivingEntity) entity;
-            livingEntity.addEffect(new MobEffectInstance(ModEffects.SOUL_BURN_EFFECT, 5));
+            livingEntity.addEffect(new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 5));
         }
         super.entityInside(state, level, pos, entity);
     }

@@ -58,7 +58,7 @@ public class UnscrupulousMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SOUL_BURN_FIRE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SENSUS_FIRE.get(), RenderType.cutoutMipped());
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

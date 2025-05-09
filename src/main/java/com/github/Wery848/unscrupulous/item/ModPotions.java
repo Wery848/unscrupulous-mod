@@ -13,10 +13,10 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(BuiltInRegistries.POTION, UnscrupulousMod.MODID);
 
-    public static final Holder<Potion> SOUL_FIRE_POTION = POTIONS.register("soul_burn_fire_potion",
-            () -> new Potion("soul_burn_fire_potion", new MobEffectInstance(ModEffects.SOUL_BURN_EFFECT, 200, 0)));
-    public static final Holder<Potion> SOUL_STONE_SOLUTION = POTIONS.register("soul_stone_solution",
-            () -> new Potion("soul_stone_solution"));
+    public static final Holder<Potion> SENSUS_POTION = POTIONS.register("sensus_fire_potion",
+            () -> new Potion("sensus_fire_potion", new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 200, 0)));
+    public static final Holder<Potion> SENSUS_SOLUTION = POTIONS.register("sensus_solution",
+            () -> new Potion("sensus_solution"));
 
     public static void register(IEventBus bus) {
         POTIONS.register(bus);

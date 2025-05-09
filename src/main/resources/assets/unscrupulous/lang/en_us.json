@@ -1,21 +1,21 @@
 {
-  "item.unscrupulous.soul_stone": "Soul Stone",
-  "item.unscrupulous.soul_apple": "Soul Apple",
-  "item.unscrupulous.refined_soul_stone": "Refined Soul Stone",
-  "item.unscrupulous.soul_in_a_bottle": "Soul-In-A-Bottle",
+  "item.unscrupulous.unrefined_sensus": "Unrefined Sensus",
+  "item.unscrupulous.sensus_apple": "Sensus Apple",
+  "item.unscrupulous.refined_sensus": "Refined Sensus",
+  "item.unscrupulous.bottled_flame": "Peculiar Flame",
 
-  "block.unscrupulous.soul_stone_ore": "Soul Stone Ore",
-  "block.unscrupulous.deepslate_soul_stone_ore": "Deepslate Soul Stone Ore",
+  "block.unscrupulous.sensus_ore": "Sensus Ore",
+  "block.unscrupulous.deepslate_sensus_ore": "Deepslate Sensus Ore",
 
-  "effect.unscrupulous.soulburn": "Soul Burn",
+  "effect.unscrupulous.sensus_burn": "Sensus Burn",
 
   "creativetab.unscrupulous.unscrupulous_things": "Unscrupulous Mod",
 
-  "item.minecraft.potion.effect.soul_burn_fire_potion": "Soulfire Potion",
-  "item.minecraft.splash_potion.effect.soul_burn_fire_potion": "Splash Soulfire Potion",
-  "item.minecraft.lingering_potion.effect.soul_burn_fire_potion": "Lingering Soulfire Potion",
+  "item.minecraft.potion.effect.sensus_fire_potion": "Sensus Fire Potion",
+  "item.minecraft.splash_potion.effect.sensus_fire_potion": "Splash Sensus Fire Potion",
+  "item.minecraft.lingering_potion.effect.sensus_fire_potion": "Lingering Sensus Fire Potion",
 
-  "item.minecraft.potion.effect.soul_stone_solution": "Soul Stone Solution",
-  "item.minecraft.splash_potion.effect.soul_stone_solution": "Splash Soul Stone Solution",
-  "item.minecraft.lingering_potion.effect.soul_stone_solution": "Lingering Soul Stone Solution"
+  "item.minecraft.potion.effect.sensus_solution": "Sensus Solution",
+  "item.minecraft.splash_potion.effect.sensus_solution": "Splash Sensus Solution",
+  "item.minecraft.lingering_potion.effect.sensus_solution": "Lingering Sensus Solution"
 }

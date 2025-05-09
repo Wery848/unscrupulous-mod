@@ -2,19 +2,15 @@ package com.github.Wery848.unscrupulous.effect;
 
 import com.github.Wery848.unscrupulous.block.ModBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-public class SoulBurnEffect extends MobEffect {
+public class SensusEffect extends MobEffect {
 
-    public SoulBurnEffect(MobEffectCategory category, int color) {
+    public SensusEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
@@ -24,7 +20,7 @@ public class SoulBurnEffect extends MobEffect {
         livingEntity.setRemainingFireTicks(20);
         BlockPos blockpos = livingEntity.blockPosition();
         if(!livingEntity.isInLiquid() && !livingEntity.isInPowderSnow && !level.isClientSide()) {
-            level.setBlockAndUpdate(blockpos, ModBlocks.SOUL_BURN_FIRE.get().defaultBlockState());
+            level.setBlockAndUpdate(blockpos, ModBlocks.SENSUS_FIRE.get().defaultBlockState());
             System.out.println("Position fire placed: X = " + livingEntity.blockPosition().getX() + "; Y = " + livingEntity.blockPosition().getY() + "; Z = " + livingEntity.blockPosition().getZ());
         }
         return super.applyEffectTick(level, livingEntity, amplifier);

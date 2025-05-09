@@ -24,12 +24,12 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         // Block Models
-        blockModels.createTrivialCube(ModBlocks.SOUL_STONE_ORE.get());
-        blockModels.createTrivialCube(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.SENSUS_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.DEEPSLATE_SENSUS_ORE.get());
 
         // Multipart Blocks
         blockModels.blockStateOutput.accept(
-                MultiPartGenerator.multiPart(ModBlocks.SOUL_BURN_FIRE.get())
+                MultiPartGenerator.multiPart(ModBlocks.SENSUS_FIRE.get())
                         .with(
                                 Condition.and(
                                         Condition.condition().negatedTerm(BlockStateProperties.NORTH, true),
@@ -38,8 +38,8 @@ public class ModModelProvider extends ModelProvider {
                                         Condition.condition().negatedTerm(BlockStateProperties.UP, true),
                                         Condition.condition().negatedTerm(BlockStateProperties.WEST, true)
                                 ),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_floor0")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_floor1"))
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_floor0")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_floor1"))
                         )
                         .with(
                                 Condition.or(
@@ -52,10 +52,10 @@ public class ModModelProvider extends ModelProvider {
                                                 Condition.condition().negatedTerm(BlockStateProperties.WEST, true)
                                         )
                                 ),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side0")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side1")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt0")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt1"))
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side0")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side1")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt0")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt1"))
                         )
                         .with(
                                 Condition.or(
@@ -68,10 +68,10 @@ public class ModModelProvider extends ModelProvider {
                                                 Condition.condition().negatedTerm(BlockStateProperties.WEST, true)
                                         )
                                 ),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
                         )
                         .with(
                                 Condition.or(
@@ -84,10 +84,10 @@ public class ModModelProvider extends ModelProvider {
                                                 Condition.condition().negatedTerm(BlockStateProperties.WEST, true)
                                         )
                                 ),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
                         )
                         .with(
                                 Condition.or(
@@ -100,31 +100,31 @@ public class ModModelProvider extends ModelProvider {
                                                 Condition.condition().negatedTerm(BlockStateProperties.WEST, true)
                                         )
                                 ),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt0")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_side_alt1")).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
                         )
                         .with(
                                 Condition.condition().term(BlockStateProperties.UP, true),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_up0")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_up1")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_up_alt0")),
-                                Variant.variant().with(VariantProperties.MODEL, rl("soul_burn_fire_up_alt1"))
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_up0")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_up1")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_up_alt0")),
+                                Variant.variant().with(VariantProperties.MODEL, rl("sensus_fire_up_alt1"))
                         )
         );
 
         // Define all model resource locations
-        blockModels.createFloorFireModels(ModBlocks.SOUL_BURN_FIRE.get());
-        blockModels.createSideFireModels(ModBlocks.SOUL_BURN_FIRE.get());
-        //blockModels.createTopFireModels(ModBlocks.SOUL_BURN_FIRE.get());
+        blockModels.createFloorFireModels(ModBlocks.SENSUS_FIRE.get());
+        blockModels.createSideFireModels(ModBlocks.SENSUS_FIRE.get());
+        //blockModels.createTopFireModels(ModBlocks.sensus_FIRE.get());
         blockModels.createFire();
 
         // Item Models
-        itemModels.generateFlatItem(ModItems.SOUL_STONE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.SOUL_APPLE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.REFINED_SOUL_STONE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.SOUL_IN_A_BOTTLE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.UNREFINED_SENSUS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SENSUS_APPLE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.REFINED_SENSUS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BOTTLED_FLAME.get(), ModelTemplates.FLAT_ITEM);
     }
 
     private static ResourceLocation rl(String name) {

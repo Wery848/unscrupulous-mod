@@ -17,8 +17,8 @@ public class ModEvents {
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
 
-        builder.addMix(ModPotions.SOUL_STONE_SOLUTION, ModItems.SOUL_IN_A_BOTTLE.get(), ModPotions.SOUL_FIRE_POTION);
-        builder.addMix(Potions.WATER, ModItems.REFINED_SOUL_STONE.get(), ModPotions.SOUL_STONE_SOLUTION);
+        builder.addMix(ModPotions.SENSUS_SOLUTION, ModItems.BOTTLED_FLAME.get(), ModPotions.SENSUS_POTION);
+        builder.addMix(Potions.WATER, ModItems.REFINED_SENSUS.get(), ModPotions.SENSUS_SOLUTION);
     }
 
 

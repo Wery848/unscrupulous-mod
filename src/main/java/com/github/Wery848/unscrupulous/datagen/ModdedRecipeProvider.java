@@ -17,21 +17,10 @@ public class ModdedRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.SOUL_STONE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_soul_stone", this.has(ModItems.SOUL_STONE)).save(this.output, "soul_stone_refining");
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SOUL_STONE_ORE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_soul_stone_ore", this.has(ModBlocks.SOUL_STONE_ORE)).save(this.output, "soul_stone_ore_refining");
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DEEPSLATE_SOUL_STONE_ORE), RecipeCategory.MISC, ModItems.REFINED_SOUL_STONE, 0.1f, 800).unlockedBy("has_deepslate_soul_stone_ore", this.has(ModBlocks.DEEPSLATE_SOUL_STONE_ORE)).save(this.output, "deepslate_soul_stone_ore_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.UNREFINED_SENSUS), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_unrefined_spiritus", this.has(ModItems.UNREFINED_SENSUS)).save(this.output, "spiritus_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_spiritus_ore", this.has(ModBlocks.SENSUS_ORE)).save(this.output, "spiritus_ore_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DEEPSLATE_SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_deepslate_spiritus_ore", this.has(ModBlocks.DEEPSLATE_SENSUS_ORE)).save(this.output, "deepslate_spiritus_ore_refining");
 
-        shapeless(RecipeCategory.MISC, ModItems.SOUL_IN_A_BOTTLE)
-                .requires(Items.SOUL_SAND)
-                .requires(Items.GLASS_BOTTLE)
-                .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_soul_sand", this.has(Items.SOUL_SAND)).save(this.output);
-
-        shapeless(RecipeCategory.MISC, ModItems.SOUL_IN_A_BOTTLE)
-                .requires(Items.SOUL_SOIL)
-                .requires(Items.GLASS_BOTTLE)
-                .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_soul_soil", this.has(Items.SOUL_SOIL)).save(this.output, "unscrupulous:soul_in_a_bottle_from_soul_soil");
     }
 
     // The runner to add to the data generator

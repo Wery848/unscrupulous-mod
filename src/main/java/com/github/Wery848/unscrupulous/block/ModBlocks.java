@@ -17,7 +17,7 @@ public class ModBlocks {
             DeferredRegister.createBlocks(UnscrupulousMod.MODID);
 
     // Registry Blocks
-    public static final DeferredBlock<Block> SOUL_STONE_ORE = registerBlockAndItem("soul_stone_ore",
+    public static final DeferredBlock<Block> SENSUS_ORE = registerBlockAndItem("sensus_ore",
             BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
                     .strength(3.0f, 3.0f)
@@ -25,7 +25,7 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE)
                     );
 
-    public static final DeferredBlock<Block> DEEPSLATE_SOUL_STONE_ORE = registerBlockAndItem("deepslate_soul_stone_ore",
+    public static final DeferredBlock<Block> DEEPSLATE_SENSUS_ORE = registerBlockAndItem("deepslate_sensus_ore",
             BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
                     .strength(4.5f, 3.0f)
@@ -33,7 +33,7 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE)
     );
 
-    public static final DeferredBlock<Block> SOUL_BURN_FIRE = BLOCKS.registerBlock("soul_burn_fire", SoulBurnFire::new,
+    public static final DeferredBlock<Block> SENSUS_FIRE = BLOCKS.registerBlock("sensus_fire", SensusFire::new,
             BlockBehaviour.Properties.of().noOcclusion()
                     .mapColor(MapColor.COLOR_LIGHT_BLUE).replaceable().noCollission().instabreak().lightLevel((p_50755_) -> 10).sound(SoundType.WOOL).pushReaction(PushReaction.DESTROY));
 

@@ -15,9 +15,9 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, UnscrupulousMod.MODID);
 
-    public static Holder<MobEffect> SOUL_BURN_EFFECT = MOB_EFFECTS.register("soulburn",
-            () -> new SoulBurnEffect(MobEffectCategory.HARMFUL, 0x000000).addAttributeModifier(Attributes.BURNING_TIME,
-                    ResourceLocation.fromNamespaceAndPath(UnscrupulousMod.MODID, "soulburn"), 5.0f,
+    public static Holder<MobEffect> SENSUS_BURN_EFFECT = MOB_EFFECTS.register("sensus_burn",
+            () -> new SensusEffect(MobEffectCategory.HARMFUL, 0x000000).addAttributeModifier(Attributes.BURNING_TIME,
+                    ResourceLocation.fromNamespaceAndPath(UnscrupulousMod.MODID, "sensus_burn"), 5.0f,
                     AttributeModifier.Operation.ADD_VALUE));
 
     public static void register(IEventBus bus) {

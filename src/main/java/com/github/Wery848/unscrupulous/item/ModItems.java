@@ -15,11 +15,11 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UnscrupulousMod.MODID);
 
     // New & Improved - 12/3/24
-    public static final DeferredItem<Item> SOUL_STONE = createItemWithProps("soul_stone", new Item.Properties());
-    public static final DeferredItem<Item> REFINED_SOUL_STONE = createItemWithProps("refined_soul_stone", new Item.Properties());
-    public static final DeferredItem<Item> SOUL_IN_A_BOTTLE = createItemWithProps("soul_in_a_bottle", new Item.Properties());
+    public static final DeferredItem<Item> UNREFINED_SENSUS = createItemWithProps("unrefined_sensus", new Item.Properties());
+    public static final DeferredItem<Item> REFINED_SENSUS = createItemWithProps("refined_sensus", new Item.Properties());
+    public static final DeferredItem<Item> BOTTLED_FLAME = createItemWithProps("bottled_flame", new Item.Properties());
 
-    public static final DeferredItem<Item> SOUL_APPLE = createItemWithProps("soul_apple", new Item.Properties().food(
+    public static final DeferredItem<Item> SENSUS_APPLE = createItemWithProps("sensus_apple", new Item.Properties().food(
             new FoodProperties.Builder()
                     .nutrition(6)
                     .saturationModifier(0.8f)

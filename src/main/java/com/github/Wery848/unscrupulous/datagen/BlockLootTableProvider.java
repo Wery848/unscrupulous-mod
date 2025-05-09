@@ -5,10 +5,7 @@ import com.github.Wery848.unscrupulous.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Set;
@@ -25,11 +22,11 @@ public class BlockLootTableProvider extends BlockLootSubProvider {
 
         //dropSelf(ModBlocks.SOUL_STONE_ORE.get());
 
-        add(ModBlocks.SOUL_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.SOUL_STONE_ORE.get(), ModItems.SOUL_STONE.get()));
-        add(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.DEEPSLATE_SOUL_STONE_ORE.get(), ModItems.SOUL_STONE.get()));
-        add(ModBlocks.SOUL_BURN_FIRE.get(),
+        add(ModBlocks.SENSUS_ORE.get(),
+                block -> createOreDrop(ModBlocks.SENSUS_ORE.get(), ModItems.UNREFINED_SENSUS.get()));
+        add(ModBlocks.DEEPSLATE_SENSUS_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_SENSUS_ORE.get(), ModItems.UNREFINED_SENSUS.get()));
+        add(ModBlocks.SENSUS_FIRE.get(),
                 block -> noDrop());
 
     }
