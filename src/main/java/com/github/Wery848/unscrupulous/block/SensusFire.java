@@ -1,6 +1,5 @@
 package com.github.Wery848.unscrupulous.block;
 
-import com.github.Wery848.unscrupulous.datapacks.ModDamageSources;
 import com.github.Wery848.unscrupulous.effect.ModEffects;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -8,7 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -25,7 +24,7 @@ public class SensusFire extends BaseFireBlock {
     public static final MapCodec<SensusFire> CODEC = simpleCodec(SensusFire::new);
 
     public SensusFire(Properties properties) {
-        super(properties, 2.0f);
+        super(properties, 0.0f);
         this.registerDefaultState(
                 this.defaultBlockState()
                         .setValue(NORTH, false)
@@ -34,6 +33,7 @@ public class SensusFire extends BaseFireBlock {
                         .setValue(WEST, false)
                         .setValue(UP, false)
         );
+
     }
 
     @Override
@@ -53,11 +53,11 @@ public class SensusFire extends BaseFireBlock {
 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
-        if(entity instanceof LivingEntity) {
-            LivingEntity livingEntity = (LivingEntity) entity;
-            livingEntity.addEffect(new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 5));
+        if(entity instanceof Player) {
+            Player player = (Player) entity;
+            player.addEffect(new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 10));
         }
-        super.entityInside(state, level, pos, entity);
+        //super.entityInside(state, level, pos, entity);
     }
 
     @Override
