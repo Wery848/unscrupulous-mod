@@ -31,25 +31,15 @@ public class DataGeneration {
         event.addProvider(new LootTableProvider(output, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(BlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookup));
         event.createProvider(BlockTagProvider::new);
-        //event.createProvider(ItemTagProvider::new);
 
-        /*
-        generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(BlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
-        generator.addProvider(true, new ModdedRecipeProvider.Runner(packOutput, lookupProvider));
 
-        BlockTagsProvider blockTagsProvider = new BlockTagProvider(packOutput, lookupProvider, existingFileHelper);
-        generator.addProvider(true, blockTagsProvider);
-
-        generator.addProvider(event.includeClient(), new ItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new BlockstateProvider(packOutput, existingFileHelper));
-         */
     }
 
     @SubscribeEvent
     public static void gatherClientdata(GatherDataEvent.Client event) {
         // Register client-side providers
         event.createProvider(ModModelProvider::new);
+        event.createDatapackRegistryObjects(DatapackProvider.buildDatapackRegistries());
     }
 }

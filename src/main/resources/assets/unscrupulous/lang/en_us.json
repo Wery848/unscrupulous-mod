@@ -14,8 +14,9 @@
   "item.minecraft.potion.effect.sensus_fire_potion": "Sensus Fire Potion",
   "item.minecraft.splash_potion.effect.sensus_fire_potion": "Splash Sensus Fire Potion",
   "item.minecraft.lingering_potion.effect.sensus_fire_potion": "Lingering Sensus Fire Potion",
-
   "item.minecraft.potion.effect.sensus_solution": "Sensus Solution",
   "item.minecraft.splash_potion.effect.sensus_solution": "Splash Sensus Solution",
-  "item.minecraft.lingering_potion.effect.sensus_solution": "Lingering Sensus Solution"
+  "item.minecraft.lingering_potion.effect.sensus_solution": "Lingering Sensus Solution",
+
+  "death.attack.sensus_damage": "%1$s died when their mind burned from their body"
 }

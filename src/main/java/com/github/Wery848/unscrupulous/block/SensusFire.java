@@ -1,5 +1,6 @@
 package com.github.Wery848.unscrupulous.block;
 
+import com.github.Wery848.unscrupulous.datapacks.ModDamageSources;
 import com.github.Wery848.unscrupulous.effect.ModEffects;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
