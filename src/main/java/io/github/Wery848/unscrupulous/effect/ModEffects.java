@@ -1,6 +1,6 @@
-package com.github.Wery848.unscrupulous.effect;
+package io.github.Wery848.unscrupulous.effect;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package com.github.Wery848.unscrupulous;
+package io.github.Wery848.unscrupulous;
 
 import java.util.List;
 import java.util.Set;

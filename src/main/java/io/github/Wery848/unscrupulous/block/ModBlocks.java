@@ -1,7 +1,7 @@
-package com.github.Wery848.unscrupulous.block;
+package io.github.Wery848.unscrupulous.block;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
-import com.github.Wery848.unscrupulous.item.ModItems;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;

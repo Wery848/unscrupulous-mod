@@ -1,7 +1,7 @@
-package com.github.Wery848.unscrupulous.item;
+package io.github.Wery848.unscrupulous.item;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
-import com.github.Wery848.unscrupulous.effect.ModEffects;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.effect.ModEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffectInstance;

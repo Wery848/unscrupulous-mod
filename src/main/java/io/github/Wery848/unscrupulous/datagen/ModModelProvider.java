@@ -1,8 +1,8 @@
-package com.github.Wery848.unscrupulous.datagen;
+package io.github.Wery848.unscrupulous.datagen;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
-import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.item.ModItems;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
+import io.github.Wery848.unscrupulous.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;

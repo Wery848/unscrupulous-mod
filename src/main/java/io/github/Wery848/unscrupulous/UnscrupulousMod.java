@@ -1,9 +1,10 @@
-package com.github.Wery848.unscrupulous;
+package io.github.Wery848.unscrupulous;
 
-import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.effect.ModEffects;
-import com.github.Wery848.unscrupulous.item.ModItems;
-import com.github.Wery848.unscrupulous.item.ModPotions;
+import io.github.Wery848.unscrupulous.attached_data.SensusStat;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
+import io.github.Wery848.unscrupulous.effect.ModEffects;
+import io.github.Wery848.unscrupulous.item.ModItems;
+import io.github.Wery848.unscrupulous.item.ModPotions;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import org.slf4j.Logger;
@@ -51,6 +52,9 @@ public class UnscrupulousMod
         ModEffects.register(modEventBus);
         // Register Mod Potions
         ModPotions.register(modEventBus);
+
+        // Register Attached Data
+        SensusStat.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

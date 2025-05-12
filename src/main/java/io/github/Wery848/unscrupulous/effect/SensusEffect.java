@@ -1,7 +1,7 @@
-package com.github.Wery848.unscrupulous.effect;
+package io.github.Wery848.unscrupulous.effect;
 
-import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.datapacks.ModDamageSources;
+import io.github.Wery848.unscrupulous.attached_data.SensusStat;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
@@ -18,7 +18,9 @@ public class SensusEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity livingEntity, int amplifier) {
         if(livingEntity instanceof Player) {
-            livingEntity.hurtServer(level, ModDamageSources.sensusDamage(livingEntity), 1);
+            //livingEntity.hurtServer(level, ModDamageSources.sensusDamage(livingEntity), 1);
+            Player player = (Player) livingEntity;
+            SensusStat.changePlayerSensus(player, -1);
 
             BlockPos blockpos = livingEntity.blockPosition();
             if (!livingEntity.isInLiquid() && !livingEntity.isInPowderSnow && !level.isClientSide()) {
@@ -35,4 +37,5 @@ public class SensusEffect extends MobEffect {
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         return true;
     }
+
 }

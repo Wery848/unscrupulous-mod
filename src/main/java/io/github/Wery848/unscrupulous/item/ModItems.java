@@ -1,6 +1,6 @@
-package com.github.Wery848.unscrupulous.item;
+package io.github.Wery848.unscrupulous.item;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

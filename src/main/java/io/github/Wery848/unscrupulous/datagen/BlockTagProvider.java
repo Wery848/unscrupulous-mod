@@ -1,7 +1,7 @@
-package com.github.Wery848.unscrupulous.datagen;
+package io.github.Wery848.unscrupulous.datagen;
 
-import com.github.Wery848.unscrupulous.UnscrupulousMod;
-import com.github.Wery848.unscrupulous.block.ModBlocks;
+import io.github.Wery848.unscrupulous.UnscrupulousMod;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

@@ -1,6 +1,6 @@
-package com.github.Wery848.unscrupulous.datagen;
+package io.github.Wery848.unscrupulous.datagen;
 
-import com.github.Wery848.unscrupulous.datapacks.ModDamageSources;
+import io.github.Wery848.unscrupulous.datapacks.ModDamageSources;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.damagesource.DamageEffects;

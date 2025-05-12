@@ -1,11 +1,10 @@
-package com.github.Wery848.unscrupulous.datagen;
+package io.github.Wery848.unscrupulous.datagen;
 
-import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.item.ModItems;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
+import io.github.Wery848.unscrupulous.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.concurrent.CompletableFuture;
@@ -17,10 +16,11 @@ public class ModdedRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.UNREFINED_SENSUS), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_unrefined_spiritus", this.has(ModItems.UNREFINED_SENSUS)).save(this.output, "spiritus_refining");
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_spiritus_ore", this.has(ModBlocks.SENSUS_ORE)).save(this.output, "spiritus_ore_refining");
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DEEPSLATE_SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_deepslate_spiritus_ore", this.has(ModBlocks.DEEPSLATE_SENSUS_ORE)).save(this.output, "deepslate_spiritus_ore_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.UNREFINED_SENSUS), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_unrefined_sensus", this.has(ModItems.UNREFINED_SENSUS)).save(this.output, "sensus_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_sensus_ore", this.has(ModBlocks.SENSUS_ORE)).save(this.output, "sensus_ore_refining");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DEEPSLATE_SENSUS_ORE), RecipeCategory.MISC, ModItems.REFINED_SENSUS, 0.1f, 800).unlockedBy("has_deepslate_sensus_ore", this.has(ModBlocks.DEEPSLATE_SENSUS_ORE)).save(this.output, "deepslate_sensus_ore_refining");
 
+        //ShapedRecipeBuilder.shaped().unlockedBy().save(this.output, );
     }
 
     // The runner to add to the data generator

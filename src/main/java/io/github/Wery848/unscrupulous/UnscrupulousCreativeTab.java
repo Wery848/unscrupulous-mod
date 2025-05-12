@@ -1,7 +1,7 @@
-package com.github.Wery848.unscrupulous;
+package io.github.Wery848.unscrupulous;
 
-import com.github.Wery848.unscrupulous.block.ModBlocks;
-import com.github.Wery848.unscrupulous.item.ModItems;
+import io.github.Wery848.unscrupulous.block.ModBlocks;
+import io.github.Wery848.unscrupulous.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
