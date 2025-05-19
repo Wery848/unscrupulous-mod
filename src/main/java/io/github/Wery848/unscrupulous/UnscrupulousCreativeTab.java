@@ -27,6 +27,7 @@ public class UnscrupulousCreativeTab {
                                 output.accept(ModItems.UNREFINED_SENSUS);
                                 output.accept(ModItems.REFINED_SENSUS);
                                 output.accept(ModItems.BOTTLED_FLAME);
+                                output.accept(ModItems.SENSUS);
                                 //output.accept(PotionUtils.setPotion(new ItemStack(Items.POTION), ModPotions.SOUL_FIRE_POTION));
                             })
 

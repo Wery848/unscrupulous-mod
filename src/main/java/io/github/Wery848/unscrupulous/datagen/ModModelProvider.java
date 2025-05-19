@@ -125,6 +125,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.SENSUS_APPLE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.REFINED_SENSUS.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.BOTTLED_FLAME.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SENSUS.get(), ModelTemplates.FLAT_ITEM);
     }
 
     private static ResourceLocation rl(String name) {

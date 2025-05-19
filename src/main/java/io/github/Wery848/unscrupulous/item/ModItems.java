@@ -26,6 +26,8 @@ public class ModItems {
                     .alwaysEdible().build()
     ));
 
+    public static final DeferredItem<Item> SENSUS = createItemWithProps("sensus_item", new Item.Properties().fireResistant());
+
     // Register method for items
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

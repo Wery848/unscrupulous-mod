@@ -27,7 +27,7 @@ public class BlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.DEEPSLATE_SENSUS_ORE.get(),
                 block -> createOreDrop(ModBlocks.DEEPSLATE_SENSUS_ORE.get(), ModItems.UNREFINED_SENSUS.get()));
         add(ModBlocks.SENSUS_FIRE.get(),
-                block -> noDrop());
+                block -> createSingleItemTable(ModItems.SENSUS));
 
     }
 
