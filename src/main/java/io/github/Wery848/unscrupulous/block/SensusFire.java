@@ -48,22 +48,22 @@ public class SensusFire extends BaseFireBlock {
 
     @Override
     protected BlockState updateShape(BlockState state, LevelReader levelRead, ScheduledTickAccess schedTick, BlockPos pos, Direction dir, BlockPos pos2, BlockState p_60543_, RandomSource p_374120_) {
-        return this.canSurvive(state, levelRead, pos) ? this.defaultBlockState() : Blocks.AIR.defaultBlockState();
+        return this.canSurvive(state, levelRead, pos) ? this.defaultBlockState() : Blocks.BEDROCK.defaultBlockState();
     }
 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if(entity instanceof Player) {
             Player player = (Player) entity;
-            player.addEffect(new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 10));
+            player.addEffect(new MobEffectInstance(ModEffects.SENSUS_BURN_EFFECT, 60)); // 20 = 1 sec
         }
         //super.entityInside(state, level, pos, entity);
     }
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockPos blockpos = pos.below();
-        return level.getBlockState(blockpos).isFaceSturdy(level, blockpos, Direction.UP) || this.isValidFireLocation(level, pos);
+        //BlockPos blockpos = pos.below();
+        return true;//level.getBlockState(blockpos).isFaceSturdy(level, blockpos, Direction.UP) || this.isValidFireLocation(level, pos);
     }
 
     private boolean isValidFireLocation(BlockGetter level, BlockPos pos) {

@@ -12,6 +12,7 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.GameType;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
@@ -38,12 +39,15 @@ public class ModEvents {
     public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
         // If a player joins for the first time, the player's Sensus is set to a full 20.
         Player player = event.getEntity();
+        player.setData(SensusStat.SENSUS_COOLDOWN, player.tickCount + 20);
         if(!player.hasData(SensusStat.JOINED)) {
             player.getData(SensusStat.SENSUS);
             player.setData(SensusStat.SENSUS, 20);
             player.setData(SensusStat.JOINED, 1);
-            player.getServer().sendSystemMessage(Component.literal("First join for you, Sensus is 20"));
+            //player.getServer().sendSystemMessage(Component.literal("First join for you, Sensus is 20"));
         }
+        //DEBUG AND TESTING ONLY BELOW
+        player.setData(SensusStat.SENSUS, 20);
     }
 
     @SubscribeEvent
@@ -67,4 +71,5 @@ public class ModEvents {
         builder.addMix(ModPotions.SENSUS_SOLUTION, ModItems.BOTTLED_FLAME.get(), ModPotions.SENSUS_POTION);
         builder.addMix(Potions.WATER, ModItems.REFINED_SENSUS.get(), ModPotions.SENSUS_SOLUTION);
     }
+
 }

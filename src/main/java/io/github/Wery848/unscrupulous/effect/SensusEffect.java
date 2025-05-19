@@ -18,13 +18,13 @@ public class SensusEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity livingEntity, int amplifier) {
         if(livingEntity instanceof Player) {
-            //livingEntity.hurtServer(level, ModDamageSources.sensusDamage(livingEntity), 1);
             Player player = (Player) livingEntity;
-            SensusStat.changePlayerSensus(player, -1);
 
             BlockPos blockpos = livingEntity.blockPosition();
-            if (!livingEntity.isInLiquid() && !livingEntity.isInPowderSnow && !level.isClientSide()) {
-                level.setBlockAndUpdate(blockpos, ModBlocks.SENSUS_FIRE.get().defaultBlockState());
+            if (!level.isClientSide && SensusStat.playerHasSensus(player)) {
+                if(level.setBlockAndUpdate(blockpos, ModBlocks.SENSUS_FIRE.get().defaultBlockState())) {
+                    SensusStat.changePlayerSensus(player, -1);
+                }
             }
         }
         else {
@@ -36,6 +36,10 @@ public class SensusEffect extends MobEffect {
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         return true;
+    }
+
+    private boolean canPlaceSensusFire(ServerLevel level, Player player) {
+        return !level.isClientSide() && !player.isInLiquid() && !player.isInPowderSnow;
     }
 
 }
