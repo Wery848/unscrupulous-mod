@@ -6,7 +6,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-
 import java.util.concurrent.CompletableFuture;
 
 public class BlockTagProvider extends BlockTagsProvider {
@@ -23,7 +22,6 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SENSUS_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SENSUS_ORE.get());
-
         tag(BlockTags.FIRE)
                 .add(ModBlocks.SENSUS_FIRE.get());
     }

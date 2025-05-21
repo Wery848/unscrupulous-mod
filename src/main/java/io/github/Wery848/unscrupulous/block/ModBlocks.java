@@ -35,7 +35,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SENSUS_FIRE = BLOCKS.registerBlock("sensus_fire", SensusFire::new,
             BlockBehaviour.Properties.of().noOcclusion()
-                    .strength(-1.0F, 3600000.0F).mapColor(MapColor.COLOR_LIGHT_BLUE).noCollission().lightLevel((p_50755_) -> 10).sound(SoundType.WOOL).pushReaction(PushReaction.BLOCK));
+                    .strength(-1.0F, 3600000.0F).mapColor(MapColor.COLOR_LIGHT_BLUE).noCollission().lightLevel((p_50755_) -> 10).sound(SoundType.WOOL).pushReaction(PushReaction.BLOCK).forceSolidOn());
 
 
     // Utility Methods

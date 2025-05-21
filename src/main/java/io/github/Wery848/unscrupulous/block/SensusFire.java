@@ -4,6 +4,7 @@ import io.github.Wery848.unscrupulous.effect.ModEffects;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -17,6 +18,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.redstone.Orientation;
+import org.jetbrains.annotations.Nullable;
 
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 
@@ -37,6 +42,11 @@ public class SensusFire extends BaseFireBlock {
     }
 
     @Override
+    protected FluidState getFluidState(BlockState state) {
+        return super.getFluidState(state);
+    }
+
+    @Override
     protected MapCodec<SensusFire> codec() {
         return CODEC;
     }
@@ -52,6 +62,25 @@ public class SensusFire extends BaseFireBlock {
     }
 
     @Override
+    protected void neighborChanged(BlockState p_60509_, Level p_60510_, BlockPos p_60511_, Block p_60512_, @Nullable Orientation p_365159_, boolean p_60514_) {
+        //super.neighborChanged(p_60509_, p_60510_, p_60511_, p_60512_, p_365159_, p_60514_);
+    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
+        if(level.getFluidState(pos).is(FluidTags.WATER) || level.getFluidState((pos)).is(FluidTags.LAVA)) {
+            return;
+        }
+
+        //super.onPlace(state, level, pos, oldState, isMoving);
+    }
+
+    @Override
+    protected boolean canBeReplaced(BlockState state, Fluid fluid) {
+        return false;
+    }
+
+    @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if(entity instanceof Player) {
             Player player = (Player) entity;
@@ -64,16 +93,6 @@ public class SensusFire extends BaseFireBlock {
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         //BlockPos blockpos = pos.below();
         return true;//level.getBlockState(blockpos).isFaceSturdy(level, blockpos, Direction.UP) || this.isValidFireLocation(level, pos);
-    }
-
-    private boolean isValidFireLocation(BlockGetter level, BlockPos pos) {
-        for(Direction direction : Direction.values()) {
-            if (level.getBlockState(pos).isFlammable(level, pos.relative(direction), direction.getOpposite())) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     @Override

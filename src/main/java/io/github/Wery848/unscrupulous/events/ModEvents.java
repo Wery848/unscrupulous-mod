@@ -47,7 +47,7 @@ public class ModEvents {
             //player.getServer().sendSystemMessage(Component.literal("First join for you, Sensus is 20"));
         }
         //DEBUG AND TESTING ONLY BELOW
-        player.setData(SensusStat.SENSUS, 20);
+        //player.setData(SensusStat.SENSUS, 20);
     }
 
     @SubscribeEvent
